@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.navbar1{
+  background: rgb(247,10,124);
+  background: linear-gradient(61deg, rgba(247,10,124,1) 0%, rgba(111,20,183,1) 17%, rgba(193,15,189,1) 17%, rgba(11,51,148,1) 63%, rgba(224,0,255,1) 84%, rgba(67,50,232,1) 84%, rgba(184,14,61,1) 97%);  height: 1.5rem;
+  display: flex;
+  height: 2.2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-left:3rem ;
+  padding-right:3rem ;
+  color: white;
+  text-decoration: none;
+  min-width: 1140px;
+}
+.logo a{
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+button{
+  padding-inline: 1.2rem;
+  padding-block: 0.4rem;
+  border-radius: 0.3rem;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+}
+.button {
+  display: flex;
+  gap: 0.7rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.button a{
+  font-size: 0.8rem;
+  text-decoration: none;
+  font-weight: 500; 
+}
+.button button{
+  background: linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+.button a:hover{
+  color: rgb(13, 34, 34);
+  cursor: pointer;
+  font-weight: 600;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out; 
+}
+
+.button button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+  background: rgb(214,138,202);
+  background: linear-gradient(345deg, rgb(165, 157, 163) 25%, rgba(236,241,243,1) 83%);
+}
+
+.navbar2 .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(0,153,222);
+  background: rgb(147,156,161);
+  background: rgb(115,141,157);
+  background: rgb(183,195,201);
+  background: linear-gradient(236deg, rgba(183,195,201,0.6784585674157304) 21%, rgba(194,168,229,1) 26%, rgba(56,15,46,1) 27%, rgba(6,216,255,0) 27%, rgba(101,137,153,1) 62%, rgba(5,28,50,0.846997893258427) 62%, rgba(163,125,194,1) 63%, rgba(184,194,194,0.6756495786516854) 67%);
+  font-weight: 500;
+  padding-right: 1.5rem;
+  height: 2.2rem;
+}
+.container ul{
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  text-decoration: none;
+}
+
+.container ul li a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.container ul li a:hover{
+  color: rgb(13, 34, 34);
+  cursor: pointer;
+  font-weight: 600;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out; 
+}
+.search{
+  display: flex;
+  gap: 0.5rem;
+}
+.search input{
+  padding-inline: 1.7rem;
+  padding-block: 0.2rem;
+  border-radius: 0.3rem;
+  border: 0.5px solid rgb(0, 0, 0);
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  font-size: 0.8rem;
+}   
+.search input:hover{
+  padding-inline: 1.7rem;
+  padding-block: 0.3rem;
+  border-radius: 0.3rem;
+  border: 0.5px solid rgb(0, 0, 0);
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  font-size: 0.8rem;
+}   
+
+.search button{
+  padding-inline: 1.2rem;
+  padding-block: 0.4rem;
+  border-radius: 0.3rem;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.search button:hover{
+  color: aliceblue;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+  background: rgb(214,138,202);
+  background: linear-gradient(345deg, rgba(68, 60, 62, 0.74) 25%, rgb(172, 216, 236) 83%);
+}
+
+
+
+
+

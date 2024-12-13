@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.carousel{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.carousel .item{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  inset: 0 0 0 0;
+}
+.carousel .item img{
+  width: 100%;
+  height: 89%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.carousel .list .item .content{
+  position: absolute;
+  top: 20%;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 5px 10px rgb(0, 0, 0);
+  width: 1140px;
+  max-width: 80%;
+  left: 43%;
+  transform: translate(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;  
+}
+.carousel .content .movieName{
+  font-weight: bold;
+  font-size: 5em;
+  list-style: 1em;
+  font-family: 'Raleway', sans-serif;
+}
+.carousel .content .genre{
+  font-weight: bold;
+  font-size: 2em;
+  list-style: 1em;
+  color: orange;
+  font-family: 'Raleway', sans-serif;
+}
+.carousel .content .movieDescription{
+  margin-block: 2rem;
+  font-weight: bold;
+  font-size: 1em;
+  list-style: 1em;
+  color: white;
+  width: 80%;
+  font-family: 'Raleway', sans-serif;
+}
+.carousel .content .movieButton{
+  display: grid;
+  grid-template-columns: repeat(2, 155px);
+  grid-template-rows: 40px;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.carousel .content .movieButton .btn1{
+  border: none;
+  background: #eee;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+.carousel .content .movieButton .btn2{
+  border: 1px solid #eee;
+  color: #eee;
+  background-color: transparent;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.thumbnail{
+    position: absolute;
+    bottom: 20px;
+    left: 42%;
+    z-index: 100;
+    display: flex;
+    gap: 13px;
+  }
+.thumbnail .item{
+  width: 120px;
+  height: 220px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.thumbnail .item img{
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.thumbnail .item .content{
+  position: absolute;
+  bottom: 70px;
+  left: 10px;
+  right: 10px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 5px 10px rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;
+}
+.thumbnail .item .content .title{
+  font-weight: bold;
+  font-size: 0.89em;
+  list-style: 1em;
+}
+
+.thumbnail .content .description{
+  font-size: 0.7em;
+  font-weight: 400;
+  list-style: 1em;
+}
+
+.arrow{
+  position: absolute;
+  top: 83%;
+  right: 46%;
+  z-index: 100;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+}
+.arrow button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #eee4;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+}
+
+.arrow button:hover{
+  background-color: #858585;
+  color: #000;
+}
+
+.carousel .item:nth-child(1) {
+  z-index: 1;
+}
+
+.carousel .item:nth-child(1) .movieName,
+.carousel .item:nth-child(1) .movieDescription,
+.carousel .item:nth-child(1) .genre,
+.carousel .item:nth-child(1) .movieButton {
+  transform: translateY(50px); 
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.carousel .list .item:nth-child(1) .content .title{
+  animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+  animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+  animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+  animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  border-radius: 30px;
+  animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+  to{
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+  }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+  overflow: hidden;
+  animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+  z-index: 100;
+}
+@keyframes showThumbnail{
+  from{
+      width: 0;
+      opacity: 0;
+  }
+}
+.carousel.next .thumbnail{
+  animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+  from{
+      transform: translateX(150px);
+  }
+}
+
+/* running time */
+
+.carousel .time{
+  position: absolute;
+  z-index: 1000;
+  width: 0%;
+  height: 3px;
+  background-color: #f1683a;
+  left: 0;
+  top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+  animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+  from{ width: 100%}
+  to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+  z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+  animation: outFrame 0.5s linear 1 forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@keyframes outFrame{
+  to{
+      width: 150px;
+      height: 220px;
+      bottom: 50px;
+      left: 50%;
+      border-radius: 20px;
+  }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+  pointer-events: none;
+}
